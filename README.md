@@ -36,7 +36,7 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
   
  - ### Uploaded by a particular user
    **Endpoint Path:** ```/user```\
-   The enddpoint takes only one parameter.
+   The endpoint takes only one argument.
    
    | **Request** | **Argument** | **Description** |
    | ------| ------| ------ |
