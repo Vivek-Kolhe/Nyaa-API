@@ -10,37 +10,37 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
 
 - ### Anime Torrent Search
   **Endpoint Path:** ```/anime/search```\
-  The endpoint takes **three parameters**.
+  The endpoint takes **three arguments**.
   
-  | **Requests** | **Parameter** | **Description** |
+  | **Request** | **Arguments** | **Description** |
   | ------| ------| ------ |
-  | ```/anime/search``` | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Anime to be searched.</p><p>**Category:** Can be any of the category listed: ***amv***, ***eng***, ***non-eng***, ***raw*** or ***all***. </p> |
-  | ```/anime/search``` | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's link.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
+  | <p>Anime torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Anime to be searched.</p><p>**Category:** Can be any of the category listed: ***amv***, ***eng***, ***non-eng***, ***raw*** or ***all***. </p> |
+  | <p>Anime torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's link.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
   
-  ***Note:*** When using ```id``` as parameter, the other two parameters are not required.\
+  ***Note:*** When using ```id``` as argument, the other two arguments are not required.\
   **Example:**
   - ```https://nyaaapi.herokuapp.com/anime/search?category=eng&query=clannad```
   - ```https://nyaaapi.herokuapp.com/anime/search?id=1270739```
   
 - ### Manga Torrent Search
   **Endpoint Path:** ```/manga/search```\
-  This endpoint also takes **three parameters**.
+  This endpoint also takes **three arguments**.
   
-  | **Requests** | **Parameter** | **Description** |
+  | **Request** | **Arguments** | **Description** |
   | ------| ------| ------ |
-  | ```/manga/search``` | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category listed: ***eng***, ***non-eng***, ***raw*** or ***all***. </p> |
-  | ```/manga/search``` | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's link.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
+  | <p>Manga torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category listed: ***eng***, ***non-eng***, ***raw*** or ***all***. </p> |
+  | <p>Manga torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's link.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
   
-  ***Note:*** When using ```id``` as parameter, the other two parameters are not required.\
+  ***Note:*** When using ```id``` as argument, the other two arguments are not required.\
   *For examples, refer to the above section.*
   
  - ### Uploaded by a particular user
    **Endpoint Path:** ```/user```\
    The enddpoint takes only one parameter.
    
-   | **Requests** | **Parameter** | **Description** |
+   | **Request** | **Argument** | **Description** |
    | ------| ------| ------ |
-   | ```/user``` | <p>```user```**(Required)**</p> | <p>**User:** Username of the uploader.</p> |
+   | <p>Torrents uploaded by an user.</p> | <p>```user```**(Required)**</p> | <p>**User:** Username of the uploader.</p> |
    
    ***Note:*** The user shouldn't be anonymous and user's exact username must be passed.\
    **Example:**
