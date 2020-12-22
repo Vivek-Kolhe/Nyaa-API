@@ -17,7 +17,7 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
   
   | **Request** | **Arguments** | **Description** |
   | ------| ------| ------ |
-  | <p>Anime torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Anime to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/AniTorrents-API/blob/main/README.md#anime-torrent-search-1">categories</a>. </p> |
+  | <p>Anime torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Anime to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/Nyaa-API/blob/main/README.md#anime-torrent-search-1">categories</a>. </p> |
   | <p>Anime torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's url.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
   
   ***Note:*** When using ```id``` as argument, then the other two arguments are not required.\
@@ -31,7 +31,7 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
   
   | **Request** | **Arguments** | **Description** |
   | ------| ------| ------ |
-  | <p>Manga torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/AniTorrents-API/blob/main/README.md#manga-torrent-search-1">categories</a>. </p> |
+  | <p>Manga torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/Nyaa-API/blob/main/README.md#manga-torrent-search-1">categories</a>. </p> |
   | <p>Manga torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's url.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
   
   ***Note:*** When using ```id``` as argument, then the other two arguments are not required.\
@@ -43,7 +43,7 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
   
    | **Request** | **Arguments** | **Description** |
    | ------| ------| ------ |
-   | <p>Torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/AniTorrents-API/blob/main/README.md#sukebei-search-1">categories</a>. </p> |
+   | <p>Torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/Nyaa-API/blob/main/README.md#sukebei-search-1">categories</a>. </p> |
    | <p>Torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's url.</p><p>**Eg:** ```https://sukebei.nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
   
    ***Note:*** When using ```id``` as argument, then the other two arguments are not required.\
