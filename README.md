@@ -5,95 +5,95 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
 
 ## Update
  - Added Sukebei search ***(NSFW content!)***.
+ - Covers complete Nyaa and Sukebei.
 
 ## Usage
 ***Note:*** The API is hosted at **heroku** so it might be slow to respond. The API will fetch only recently uploaded 750 torrents, if the number of torrents are larger.
 
-**The API is available at:** ```https://nyaaapi.herokuapp.com/```
+**The API is available at:** ```https://nyaaapi.herokuapp.com/```\
 
-- ### Anime Torrent Search
-  **Endpoint Path:** ```/anime/search```\
-  The endpoint takes **three arguments**.
-  
-  | **Request** | **Arguments** | **Description** |
-  | ------| ------| ------ |
-  | <p>Anime torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Anime to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/Nyaa-API/blob/main/README.md#anime-torrent-search-1">categories</a>. </p> |
-  | <p>Anime torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's url.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
-  
-  ***Note:*** When using ```id``` as argument, then the other two arguments are not required.\
-  **Example:**
-  - ```https://nyaaapi.herokuapp.com/anime/search?category=eng&query=clannad```
-  - ```https://nyaaapi.herokuapp.com/anime/search?id=1270739```
-  
-- ### Manga Torrent Search
-  **Endpoint Path:** ```/manga/search```\
-  This endpoint also takes **three arguments**.
-  
-  | **Request** | **Arguments** | **Description** |
-  | ------| ------| ------ |
-  | <p>Manga torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/Nyaa-API/blob/main/README.md#manga-torrent-search-1">categories</a>. </p> |
-  | <p>Manga torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's url.</p><p>**Eg:** ```https://nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
-  
-  ***Note:*** When using ```id``` as argument, then the other two arguments are not required.\
-  *For examples, refer to the above section.*
- 
- - ### Sukebei Search
-   **Endpoint Path:** ```/sukebei/search```\
-   This endpoint also takes **three arguments**.
-  
-   | **Request** | **Arguments** | **Description** |
-   | ------| ------| ------ |
-   | <p>Torrent search using query and category.</p> | <p> ```query``` **(Required)**</p><p>```category```**(Required)**</p> | <p>**Query:** Query to be searched.</p><p>**Category:** Can be any of the category. Check below for the complete list of <a href="https://github.com/Vivek-Kolhe/Nyaa-API/blob/main/README.md#sukebei-search-1">categories</a>. </p> |
-   | <p>Torrent search using torrent ID.</p> | <p> ```id``` </p> **(Required)**</p> | <p>**ID:** ID is generally the numerical part located at the end of the particular torrent's url.</p><p>**Eg:** ```https://sukebei.nyaa.si/view/1234567 ```, here ID is ***1234567***</p> |
-  
-   ***Note:*** When using ```id``` as argument, then the other two arguments are not required.\
-   **Example:**
-   - ```https://nyaaapi.herokuapp.com/sukebei/search?query=euphoria&category=anime```
-   - ```https://nyaaapi.herokuapp.com/sukebei/search?id=2847009```
- 
- - ### Uploaded by a particular user
-   **Endpoint Path:** ```/user```\
-   The endpoint takes only one argument.
-   
-   | **Request** | **Argument** | **Description** |
-   | ------| ------| ------ |
-   | <p>Torrents uploaded by an user.</p> | <p>```user```**(Required)**</p> | <p>**User:** Username of the uploader.</p> |
-   
-   ***Note:*** The user shouldn't be anonymous and user's exact username must be passed.\
-   **Example:**
-   - ```https://nyaaapi.herokuapp.com/user?user=judas```
-
-## Available Categories
-- ### Anime Torrent Search
-  | **Abbreviation** | **Definition** |
-  |---------|---------|
-  | ```all``` | Can be used to fetch results from all categories. |
-  | ```amv``` | Anime Music Video. |
-  | ```eng``` | English translated anime torrents. |
-  | ```non-eng``` | Non - English anime torrents. |
-  | ```raw``` | Raw anime torrents. |
-
-- ### Manga Torrent Search
-  | **Abbreviation** | **Definition** |
-  |---------|---------|
-  | ```all``` | Can be used to fetch results from all categories. |
-  | ```eng``` | English translated manga torrents. |
-  | ```non-eng``` | Non - English manga torrents. |
-  | ```raw``` | Raw manga torrents. |
+ - ### Nyaa Search
+   - #### Available Endpoints
+       **Every endpoint takes two arguments.**
+       | **Arguments** | **Description** |
+       |------|------|
+       | ```query``` **(Required)** | Search query. |
+       | ```sub_category``` **(Optional)** | Sub category of the torrents. |
+       
+       - **Endpoints:**
+           | **Category** | **Endpoint** |
+           |---------|---------|
+           | Anime | ```/nyaa/anime``` |
+           | Manga | ```/nyaa/manga``` |
+           | Audio | ```/nyaa/audio``` |
+           | Pictures | ```/nyaa/pictures``` |
+           | Live Action | ```/nyaa/live_action``` |
+           | Software | ```/nyaa/software``` |
+       
+       - **Sub-Categories:**
+           | **Category** | **Sub-Category** |
+           |------|------|
+           | Anime | ```amv```, ```eng```, ```non-eng```, ```raw``` |
+           | Manga | ```eng```, ```non-eng```, ```raw``` |
+           | Audio | ```lossy```, ```lossless``` |
+           | Pictures | ```photos```, ```graphics``` |
+           | Live Action | ```promo```, ```eng```, ```non-eng```, ```raw``` |
+           | Software | ```application```, ```games``` |
+     
+   - #### Examples
+       -  ```https://nyaaapi.herokuapp.com/nyaa/anime?query={search_query}```
+       -  ```https://nyaaapi.herokuapp.com/nyaa/anime?query={search_query}&sub_category{sub_category}```
+       -  ```https://nyaaapi.herokuapp.com/nyaa/manga?query={search_query}&sub_category{sub_category}```
 
 - ### Sukebei Search
-  | **Abbreviation** | **Definition** |
-  |---------|---------|
-  | ```all``` | Can be used to fetch results from all categories. |
-  | ```art``` | Art. |
-  | ```anime``` | Anime torrents. |
-  | ```dou``` | Doujin torrents. |
-  | ```games``` | Games torrents. |
-  | ```manga``` | Manga torrents. |
-  | ```pics``` | Pictures torrents. |
-  | ```real``` | Might be JAV torrents (I never tried. T-T). |
-  | ```picbook``` | Picturebook torrents. |
-  | ```vid``` | Video torrents. |
+   - #### Available Endpoints
+       **Every endpoint takes two arguments.**
+       | **Arguments** | **Description** |
+       |------|------|
+       | ```query``` **(Required)** | Search query. |
+       | ```sub_category``` **(Optional)** | Sub category of the torrents. |
+       
+       - **Endpoints:**
+           | **Category** | **Endpoint** |
+           |---------|---------|
+           | Art | ```/sukebei/art``` |
+           | Real | ```/sukebei/real``` |
+       
+       - **Sub-Categories:**
+           | **Category** | **Sub-Category** |
+           |------|------|
+           | Art | ```anime```, ```doujinshi```, ```games```, ```manga```, ```pictures``` |
+           | Real | ```photos```, ```videos``` |
+     
+   - #### Examples
+       -  ```https://nyaaapi.herokuapp.com/sukebei/art?query={search_query}```
+       -  ```https://nyaaapi.herokuapp.com/sukebei/art?query={search_query}&sub_category{sub_category}```
+       -  ```https://nyaaapi.herokuapp.com/sukebei/real?query={search_query}&sub_category{sub_category}```
+
+ - ### Search Using ID
+    - #### Available Endpoints
+      - #### Nyaa ID
+        **Endpoint:** ```/nyaa/id/<id>```\
+        **Example:** ```https://nyaaapi.herokuapp.com/nyaa/id/{id}```
+
+      - #### Sukebei ID
+        **Endpoint:** ```/sukebei/id/<id>```\
+        **Example:** ```https://nyaaapi.herokuapp.com/sukebei/id/{id}```
+
+ - ### Torrents Uploaded by an User
+    - #### Available Endpoints
+        **Endpoint takes one argument.**
+        | **Arguments** | **Description** |
+        |------|------|
+        | ```user``` **(Required)** | Username. |
+        
+       - **Nyaa User:**
+         **Endpoint:** ```/nyaa/user```\
+         **Example:** ```https://nyaaapi.herokuapp.com/nyaa/user?user={user_name}```
+       
+       - **Sukebei User:**
+         **Endpoint:** ```/sukebei/user```\
+         **Example:** ```https://nyaaapi.herokuapp.com/sukebei/user?user={user_name}```
 
 ## Disclaimer
 **I do not host any of the torrents fetched by the API. The API is just meant to scrape the website and return the results. I do not promote piracy, if you guys can afford legal methods, then use them and support the industry :).\
