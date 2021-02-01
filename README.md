@@ -10,7 +10,7 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
 ## Usage
 ***Note:*** The API is hosted at **heroku** so it might be slow to respond. The API will fetch only recently uploaded 750 torrents, if the number of torrents are larger.
 
-**The API is available at:** ```https://nyaaapi.herokuapp.com/```\
+**The API is available at:** ```https://nyaaapi.herokuapp.com/```
 
  - ### Nyaa Search
    - #### Available Endpoints
