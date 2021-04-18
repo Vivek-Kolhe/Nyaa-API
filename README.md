@@ -101,3 +101,4 @@ Use it at your own risk, LOL!**
 
 ## ⭐ Made using Nyaa-API
   - [Nyaa-Telegram-Bot](https://t.me/meow_in_japanese_bot): Browse Sukebei and Nyaa torrents right inside Telegram. [GitHub](https://github.com/Vivek-Kolhe/Nyaa-Telegram-Bot).
+  - [nyaamal](https://github.com/laxyapahuja/nyaamal): Chrome extension to download torrents directly from MyAnimeList and Anilist.
