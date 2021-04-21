@@ -134,7 +134,7 @@ And I'm sorry I've decided to keep the API closed source. I might make it open s
 Use it at your own risk, LOL!**
 
 ## Report Issues
-**Report any issue at:** [pookie_0_0](https://t.me/pookie_0_0).
+**Report any issues or bugs at:** [pookie_0_0](https://t.me/pookie_0_0).
 
 ## ⭐ Made using Nyaa-API
   - [Nyaa-Telegram-Bot](https://t.me/meow_in_japanese_bot): Browse Sukebei and Nyaa torrents right inside Telegram. [GitHub](https://github.com/Vivek-Kolhe/Nyaa-Telegram-Bot).
