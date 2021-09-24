@@ -1,6 +1,6 @@
 # Nyaa-API
 Nyaa API is an **Unofficial Nyaa.si API**. It just scrapes the website to satisfy the need for an API.\
-And I'm sorry I've decided to keep the API closed source. I might make it open source in the near future. \
+The API is closed source for now. I might make it open source in the near future. \
 ***Note:*** This API doesn't make authenticated requests to Nyaa, so you cannot make changes to your account or upload anything.
 
 ## Update
