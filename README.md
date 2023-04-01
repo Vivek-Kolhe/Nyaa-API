@@ -133,9 +133,6 @@ The API is closed source for now. I might make it open source in the near future
 **I do not host any of the torrents fetched by the API. The API is just meant to scrape the website and return the results. I do not promote piracy, if you guys can afford legal methods, then use them and support the industry :).\
 Use it at your own risk, LOL!**
 
-## Report Issues
-**Report any issues or bugs at:** [pookie_0_0](https://t.me/pookie_0_0).
-
 ## ⭐ Made using Nyaa-API
   - [Nyaa-Telegram-Bot](https://t.me/meow_in_japanese_bot): Browse Sukebei and Nyaa torrents right inside Telegram. [GitHub](https://github.com/Vivek-Kolhe/Nyaa-Telegram-Bot).
   - [nyaamal](https://github.com/laxyapahuja/nyaamal): Chrome extension to download torrents directly from MyAnimeList and Anilist.
