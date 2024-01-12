@@ -1,138 +1,115 @@
-# Nyaa-API
-Nyaa API is an **Unofficial Nyaa.si API**. It just scrapes the website to satisfy the need for an API.\
-The API is closed source for now. I might make it open source in the near future. \
-***Note:*** This API doesn't make authenticated requests to Nyaa, so you cannot make changes to your account or upload anything.
+<h1 align="center"> Nyaa API </h1>
 
-## Update
- - Added Sukebei search ***(NSFW content!)***.
- - Covers complete Nyaa and Sukebei.
- - Added Sorting.
+<p align="center">
+<a href="https://github.com/Vivek-Kolhe"><img src="https://img.shields.io/github/followers/Vivek-Kolhe?style=for-the-badge&labelColor=%23555555&color=%23263759" title="gh followers"></a>
+<a href="https://github.com/Vivek-Kolhe/Nyaa-API/stargazers"><img src="https://img.shields.io/github/stars/Vivek-Kolhe/Nyaa-API?style=for-the-badge&labelColor=%23555555&color=%23263759" title="repo stars"></a>
+<a href="https://telegram.dog/ded_sadge"><img src="https://img.shields.io/badge/ded__sadge-smthing?style=for-the-badge&logo=telegram&labelColor=%23555555&color=%23263759" title="repo stars"></a>
+</p>
+
+<p align="center">
+Nyaa API is an Unofficial Nyaa.si API. It just scrapes the website to satisfy the need for an API.
+<br>
+The API is closed source for now. I might make it open source in the near future. <a href="https://nyaaapi.onrender.com/docs"> Documentation. </a>
+</p>
 
 ## Usage
-***Note:*** The API is hosted at **heroku** so it might be slow to respond. The API will fetch only recently uploaded 750 torrents, if the number of torrents are larger.
+**The API is available at:** `https://nyaaapi.onrender.com/`
 
-**The API is available at:** ```https://nyaaapi.herokuapp.com/```
+<details open>
+<summary><span style="font-size: 15px; font-weight:bold"> Search </span></summary>
+<p>
 
- - ### Nyaa Search
-   - #### Available Endpoints
-       **Every endpoint takes two arguments.**
-       | **Arguments** | **Description** |
-       |------|------|
-       | ```query``` **(Required)** | Search query. |
-       | ```sub_category``` **(Optional)** | Sub category of the torrents. |
-       | ```sort``` **(Optional)** | Sorting parameter |
-       | ```order``` **(Optional)** | Order of sorting. Defaults to ***Descending order***. |
-       
-       - **Endpoints:**
-           | **Category** | **Endpoint** |
-           |---------|---------|
-           | Anime | ```/nyaa/anime``` |
-           | Manga | ```/nyaa/manga``` |
-           | Audio | ```/nyaa/audio``` |
-           | Pictures | ```/nyaa/pictures``` |
-           | Live Action | ```/nyaa/live_action``` |
-           | Software | ```/nyaa/software``` |
-       
-       - **Sub-Categories:**
-           | **Category** | **Sub-Category** |
-           |------|------|
-           | Anime | ```amv```, ```eng```, ```non-eng```, ```raw``` |
-           | Manga | ```eng```, ```non-eng```, ```raw``` |
-           | Audio | ```lossy```, ```lossless``` |
-           | Pictures | ```photos```, ```graphics``` |
-           | Live Action | ```promo```, ```eng```, ```non-eng```, ```raw``` |
-           | Software | ```application```, ```games``` |
-     
-       - **Sorting:**
-           | **Arguments** | **Methods**  |
-           | ---- | ---- |
-           | Sort | ```size```, ```seeders```, ```leechers```, ```date```, ```downloads``` |
-           | Order | ```asc```, ```desc``` |
-   - #### Examples
-       -  ```https://nyaaapi.herokuapp.com/nyaa/anime?query={search_query}```
-       -  ```https://nyaaapi.herokuapp.com/nyaa/anime?query={search_query}&sub_category{sub_category}```
-       -  ```https://nyaaapi.herokuapp.com/nyaa/manga?query={search_query}&sub_category{sub_category}```
-       -  ```https://nyaaapi.herokuapp.com/nyaa/anime?sub_category={sub_category}&query={search_query}&sort={sorting_parameter}```
-       -  ```https://nyaaapi.herokuapp.com/nyaa/anime?sub_category={sub_category}&query={search_query}&sort={sorting_parameter}&order={order}```
+- **Nyaa Endpoint:** `https://nyaaapi.onrender.com/nyaa`
+- **Sukebei Endpoint:** `https://nyaaapi.onrender.com/sukebei`
 
-- ### Sukebei Search
-   - #### Available Endpoints
-       **Every endpoint takes two arguments.**
-       | **Arguments** | **Description** |
-       |------|------|
-       | ```query``` **(Required)** | Search query. |
-       | ```sub_category``` **(Optional)** | Sub category of the torrents. |
-       | ```sort``` **(Optional)** | Sorting parameter |
-       | ```order``` **(Optional)** | Order of sorting. Defaults to ***Descending order***. |
-       
-       - **Endpoints:**
-           | **Category** | **Endpoint** |
-           |---------|---------|
-           | Art | ```/sukebei/art``` |
-           | Real | ```/sukebei/real``` |
-       
-       - **Sub-Categories:**
-           | **Category** | **Sub-Category** |
-           |------|------|
-           | Art | ```anime```, ```doujinshi```, ```games```, ```manga```, ```pictures``` |
-           | Real | ```photos```, ```videos``` |
-           
-       - **Sorting:**
-           | **Arguments** | **Methods**  |
-           | ---- | ---- |
-           | Sort | ```size```, ```seeders```, ```leechers```, ```date```, ```downloads``` |
-           | Order | ```asc```, ```desc``` |
-           
-   - #### Examples
-       -  ```https://nyaaapi.herokuapp.com/sukebei/art?query={search_query}```
-       -  ```https://nyaaapi.herokuapp.com/sukebei/art?query={search_query}&sub_category{sub_category}```
-       -  ```https://nyaaapi.herokuapp.com/sukebei/real?query={search_query}&sub_category{sub_category}```
-       -  ```https://nyaaapi.herokuapp.com/sukebei/art?sub_category={sub_category}&query={search_query}&sort={sorting_parameter}&order={order}```
-       -  ```https://nyaaapi.herokuapp.com/sukebei/art?sub_category={sub_category}&query={search_query}&sort={sorting_parameter}```
+</p>
+<details closed>
+<summary><span style="font-size: 12px; font-weight: bold"> Examples </span></summary>
+<p>
 
- - ### Search Using ID
-    - #### Available Endpoints
-      - #### Nyaa ID
-        **Endpoint:** ```/nyaa/id/<id>```\
-        **Example:** ```https://nyaaapi.herokuapp.com/nyaa/id/{id}```
+- `https://nyaaapi.onrender.com/nyaa?q={query}&category={torrent_category}`
+- `https://nyaaapi.onrender.com/sukebei?q={query}&category={torrent_category}`
 
-      - #### Sukebei ID
-        **Endpoint:** ```/sukebei/id/<id>```\
-        **Example:** ```https://nyaaapi.herokuapp.com/sukebei/id/{id}```
+</p>
+</details>
 
- - ### Torrents Uploaded by an User
-    - #### Available Endpoints
-        **Endpoint takes one argument.**
-        | **Arguments** | **Description** |
-        |------|------|
-        | ```user``` **(Required)** | Username. |
-        | ```sort``` **(Optional)** | Sorting parameter |
-        | ```order``` **(Optional)** | Order of sorting. Defaults to ***Descending order***. |
-        
-       - **Sorting:**
-           | **Arguments** | **Methods**  |
-           | ---- | ---- |
-           | Sort | ```size```, ```seeders```, ```leechers```, ```date```, ```downloads``` |
-           | Order | ```asc```, ```desc``` |
-           
-       - **Nyaa User:**
-         **Endpoint:** ```/nyaa/user```\
-         **Examples:** \
-                       ```https://nyaaapi.herokuapp.com/nyaa/user?user={user_name}``` \
-                       ```https://nyaaapi.herokuapp.com/nyaa/user?user={user_name}&sort={sorting_parameter}```\
-                       ```https://nyaaapi.herokuapp.com/nyaa/user?user={user_name}&sort={sorting_parameter}&order={order}```
-       
-       - **Sukebei User:**
-         **Endpoint:** ```/sukebei/user```\
-         **Examples:** \
-                       ```https://nyaaapi.herokuapp.com/sukebei/user?user={user_name}``` \
-                       ```https://nyaaapi.herokuapp.com/sukebei/user?user={user_name}&sort={sorting_parameter}```\
-                       ```https://nyaaapi.herokuapp.com/sukebei/user?user={user_name}&sort={sorting_parameter}&order={order}```
+**Note:** These endpoints also take optional query parameters. For more info, [visit here](https://nyaaapi.onrender.com/docs#/Search).
+
+</details>
+
+<details open>
+<summary><span style="font-size: 15px; font-weight:bold"> User search </span></summary>
+<p>
+
+- **Nyaa Endpoint:** `https://nyaaapi.onrender.com/nyaa/user/{user_name}`
+- **Sukebei Endpoint:** `https://nyaaapi.onrender.com/sukebei/user/{user_name}`
+
+</p>
+<details closed>
+<summary><span style="font-size: 12px; font-weight: bold"> Examples </span></summary>
+<p>
+
+- `https://nyaaapi.onrender.com/nyaa/user/{user_name}?q={query}&category={torrent_category}`
+- `https://nyaaapi.onrender.com/sukebei/user/{user_name}?q={query}&category={torrent_category}`
+
+</p>
+</details>
+
+**Note:** These endpoints also take optional query parameters. For more info, [visit here](https://nyaaapi.onrender.com/docs#/User%20search).
+
+</details>
+
+<details open>
+<summary><span style="font-size: 15px; font-weight:bold"> Search using torrent ID </span></summary>
+<p>
+
+- **Nyaa Endpoint:** `https://nyaaapi.onrender.com/nyaa/id/{torrent_id}`
+- **Sukebei Endpoint:** `https://nyaaapi.onrender.com/sukebei/id/{torrent_id}`
+
+</p>
+<details closed>
+<summary><span style="font-size: 12px; font-weight: bold"> Examples </span></summary>
+<p>
+
+- `https://nyaaapi.onrender.com/nyaa/id/{torrent_id}`
+- `https://nyaaapi.onrender.com/sukebei/id/{torrent_id}`
+
+</p>
+</details>
+
+**Note:** For more info, [visit here](https://nyaaapi.onrender.com/docs#/ID%20Search).
+
+</details>
+
+## Allowed Param Values
+- **Nyaa**
+  
+  | **Category**     | **Sub-Category**                        |
+  | :--------------: | :-------------------------------------: |
+  | `anime`          | `amv`, `eng`, `non-eng`, `raw`          |
+  | `manga`          | `eng`, `non-eng`, `raw`                 |
+  | `audio`          | `lossy`, `lossless`                     |
+  | `pictures`       | `photos`, `graphics`                    |
+  | `live_action`    | `promo`, `eng`, `non-eng`, `raw`        |
+  | `software`       | `application`, `games`                  |
+
+- **Sukebei**
+
+  | **Category** | **Sub-Category**                                   |
+  |:------------:|:-------------------------------------------------: |
+  | `art`        | `anime`, `doujinshi`, `games`, `manga`, `pictures` |
+  | `real`       | `photos`, `videos`                                 |
+
+- **Sorting**
+
+  `sort`: `id`, `leechers`, `seeders`, `size`, `downloads`
+
+- **Ordering**
+
+  `order`: `asc`, `desc`
+
+**Note:** `sort` and `order` params are common for both endpoints.
 
 ## Disclaimer
 **I do not host any of the torrents fetched by the API. The API is just meant to scrape the website and return the results. I do not promote piracy, if you guys can afford legal methods, then use them and support the industry :).\
-Use it at your own risk, LOL!**
-
-## ⭐ Made using Nyaa-API
-  - [Nyaa-Telegram-Bot](https://t.me/meow_in_japanese_bot): Browse Sukebei and Nyaa torrents right inside Telegram. [GitHub](https://github.com/Vivek-Kolhe/Nyaa-Telegram-Bot).
-  - [nyaamal](https://github.com/laxyapahuja/nyaamal): Chrome extension to download torrents directly from MyAnimeList and Anilist.
+Use it at your own risk!**
