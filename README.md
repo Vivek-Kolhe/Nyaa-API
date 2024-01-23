@@ -1,6 +1,7 @@
 <h1 align="center"> Nyaa API </h1>
 
 <p align="center">
+<a href="https://nyaaapi.onrender.com/docs"><img src="https://img.shields.io/website?url=https%3A%2F%2Fnyaaapi.onrender.com%2Fdocs&style=for-the-badge&label=Status&labelColor=%23555555" title="status"></a>
 <a href="https://github.com/Vivek-Kolhe"><img src="https://img.shields.io/github/followers/Vivek-Kolhe?style=for-the-badge&labelColor=%23555555&color=%23263759" title="gh followers"></a>
 <a href="https://github.com/Vivek-Kolhe/Nyaa-API/stargazers"><img src="https://img.shields.io/github/stars/Vivek-Kolhe/Nyaa-API?style=for-the-badge&labelColor=%23555555&color=%23263759" title="repo stars"></a>
 <a href="https://telegram.dog/ded_sadge"><img src="https://img.shields.io/badge/ded__sadge-smthing?style=for-the-badge&logo=telegram&labelColor=%23555555&color=%23263759" title="repo stars"></a>
